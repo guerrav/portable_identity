@@ -3,7 +3,6 @@ ruby '2.0.0'
 
 gem 'sinatra', '~>1.4.4'
 gem 'thin'
-gem 'sinatra'
 gem 'slim'
 gem 'nokogiri'
 gem 'json'
