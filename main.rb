@@ -117,7 +117,6 @@ end
 ##
 get '/' do
   @alltags = note_store.listTags
-  notas
   
   slim :index
 end
