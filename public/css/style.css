@@ -1,0 +1,48 @@
+ul {
+    list-style-type: none;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.link {
+  stroke: lightgray;
+  stroke-width: 1;
+}
+.project {
+    fill: #ccc;
+
+}
+.circle {
+  fill: #FF0202;
+}
+
+.project, line {
+  cursor:pointer;
+}
+
+.project text {
+  fill: black;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  fill-opacity:0;
+}
+
+.project:hover text {
+  fill-opacity:1;
+}
+
+.project text.shadow {
+  fill: white;
+  fill-opacity:0;
+}
+.project:hover text.shadow {
+  stroke: #fff;
+  stroke-width: 5px;
+}
+
+.tag text {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  cursor:grabbing;
+}

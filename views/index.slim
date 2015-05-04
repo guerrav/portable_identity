@@ -1,0 +1,38 @@
+ul id="projects"
+	- all_notes_guid.each do |note|
+		li.project
+			// buscar la nota con el id
+			- nota = note_store.getNote(token, note.guid,true,true,false,false)
+
+			/////////////////// NOTA	
+
+			
+			// Fecha
+			p.date= Time.at(nota.created / 1000).strftime("%b %e %Y")
+			// Fotografias
+			- if nota.resources
+				- nota.resources.each do |resource|
+				
+					
+					- if resource.data 
+						
+						- binary_data = Base64.encode64(resource.data.body)
+						img.thumb src="data:image/png;base64,#{binary_data}" 
+			// Titulo de la nota
+			h2
+				a href="#" #{nota.title}
+			// Contenido 
+			- html_doc = Nokogiri::XML(nota.content)
+			p.description= html_doc.css('en-note').text
+			// Tags
+			- if nota.tagGuids
+
+				ul.tags
+					- nota.tagGuids.each do |tag|
+						- @alltags.each do |alltag|
+							- if alltag.guid.to_s == tag.to_s
+								li=alltag.name
+
+			- if nota.attributes
+				h1=nota.attributes.latitude
+
