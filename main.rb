@@ -2,11 +2,9 @@ require 'sinatra'
 require 'slim'
 require 'nokogiri'
 require 'json'
-require "base64"
-require "sinatra/reloader" if development?
-# Load Thrift & Evernote Ruby libraries
-require "evernote_oauth"
-
+require 'base64'
+require 'sinatra/reloader' if development?
+require 'evernote_oauth'
 
 
 
