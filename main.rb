@@ -3,7 +3,7 @@ require 'slim'
 require 'nokogiri'
 require 'json'
 require 'base64'
-require 'sinatra/reloader' if development?
+
 require 'evernote_oauth'
 
 
