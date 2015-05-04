@@ -3,7 +3,6 @@ require 'slim'
 require 'nokogiri'
 require 'json'
 require 'base64'
-
 require 'evernote_oauth'
 
 
