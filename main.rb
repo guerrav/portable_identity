@@ -6,7 +6,6 @@ require 'base64'
 require 'evernote_oauth'
 
 
-
 helpers do
 
   def token 
