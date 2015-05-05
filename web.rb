@@ -9,7 +9,7 @@ require 'evernote_oauth'
 helpers do
 
   def token 
-    @developer_token = "S=s474:U=4fd8eee:E=1547caa3a88:C=14d24f90c78:P=1cd:A=en-devtoken:V=2:H=444987d4ab918cb425a276011d3c0e1a"
+    @developer_token = "S=s1:U=90b02:E=1541c4f153c:C=14cc49de768:P=1cd:A=en-devtoken:V=2:H=87f067b71c65feb0936ffc5d84527527"
 
   end
    
