@@ -9,7 +9,7 @@ require 'evernote_oauth'
 helpers do
 
   def token 
-    @developer_token = "S=s1:U=90b02:E=1541c4f153c:C=14cc49de768:P=1cd:A=en-devtoken:V=2:H=87f067b71c65feb0936ffc5d84527527"
+    @developer_token = "S=s474:U=4fd8eee:E=1547c949d77:C=14d24e37138:P=1cd:A=en-devtoken:V=2:H=234b059eb4e02279683000744cfbbdc9"
 
   end
    
@@ -120,7 +120,7 @@ get '/' do
 end
 
 get '/graph' do
-  #graph
+  graph
   slim :graph
 end
 
