@@ -1,6 +1,28 @@
-var svg = d3.select("body").append("svg"),
+var line;
+var svg = d3.select("body").append("svg")
+  
+  
+  .on("mousedown", function() { 
+    var x = d3.mouse(this);
+    line = svg.append("line")
+      .attr("x1", x[0])
+      .attr("y1", x[1])
+      .attr("x2", x[0])
+      .attr("y2", x[1]);
+
+    svg.on("mousemove", function() { svg.on("mousemove", null);});
+  })
+  .on("mousemove", function () {
+    var x = d3.mouse(this);
+    line.attr("x2", x[0])
+      .attr("y2", x[1]);         
+  })
+  
+  .on("mouseup", function() { svg.on("mousemove", null);})
   r = 15;
 var force = d3.layout.force();
+
+
 
 
 d3.json("/js/projects.json", function(graph) {
@@ -84,6 +106,7 @@ d3.json("/js/projects.json", function(graph) {
       .attr("height", r*2);
     node.attr("transform", function(d) { return  "translate(" + Math.max(r, Math.min(width - r, d.x)) + "," + Math.max(r, Math.min(height - r, d.y)) + ")"});
   }
+  
 
   function resize() {
     width = window.innerWidth, height = window.innerHeight;
