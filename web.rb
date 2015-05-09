@@ -9,12 +9,19 @@ require 'evernote_oauth'
 helpers do
 
   def token 
-    @developer_token = "S=s1:U=90b02:E=1541c4f153c:C=14cc49de768:P=1cd:A=en-devtoken:V=2:H=87f067b71c65feb0936ffc5d84527527"
+    #cuenta real tizapense funcionando 
+    #@developer_token = "S=s64:U=6e1a25:E=154885f32de:C=14d30ae0320:P=1cd:A=en-devtoken:V=2:H=04e673f301f338307f75daa5609caa38"
+    
+    # cuenta que mando arturo por correo
+    
+    #@developer_token = "S=s474:U=4fd8eee:E=1547c949d77:C=14d24e37138:P=1cd:A=en-devtoken:V=2:H=234b059eb4e02279683000744cfbbdc9"
 
+    # mayo 7 sacado por ernesto con la cuenta de identidad ya funciona
+    @developer_token = "S=s474:U=4fd8eee:E=154889b9d95:C=14d30ea6fe0:P=1cd:A=en-devtoken:V=2:H=a6456a71ce76fa260bfb2511b2553d56"
   end
    
   def client
-    @client ||= EvernoteOAuth::Client.new(token: token)
+    @client ||= EvernoteOAuth::Client.new(token: token, sandbox: false)
   end
 
   def user_store
@@ -41,24 +48,23 @@ helpers do
     end
   end
 
-  def total_note_count
-    filter = Evernote::EDAM::NoteStore::NoteFilter.new
-    counts = note_store.findNoteCounts(token, filter, false)
-    notebooks.inject(0) do |total_count, notebook|
-      total_count + (counts.notebookCounts[notebook.guid] || 0)
-    end
-  end
-
   def all_notes
 
   @notes = note_store.findNotes(token, Evernote::EDAM::NoteStore::NoteFilter.new, 0, 100).notes
   end
 
-  def all_notes_guid  
+  def all_notes_guid 
+  filter = Evernote::EDAM::NoteStore::NoteFilter.new
   spec = Evernote::EDAM::NoteStore::NotesMetadataResultSpec.new
   spec.includeTitle = true
   spec.includeTagGuids = true
-  @notes = note_store.findNotesMetadata(token, Evernote::EDAM::NoteStore::NoteFilter.new, 0, 100, spec).notes
+  @notes = Array.new
+
+  notebooks.inject(0) do |total_guids, notebook|
+    filter.notebookGuid = notebook.guid
+    @notes.push(*note_store.findNotesMetadata(token, filter, 0, 1000, spec).notes)
+  end
+
   end
 
   def graph
@@ -68,8 +74,9 @@ helpers do
   { name: tag.name, type: "tag"}
   end
 
+
   notesList = all_notes_guid.map do |note|
-  { name: note.title, type: "project", tags: note.tagGuids, url: note.guid}
+  { name: note.title, type: "project", tags: note.tagGuids ? note.tagGuids : [], url: note.guid}
   end
   nodeList = tagsList.push(*notesList)
 
@@ -84,7 +91,8 @@ helpers do
   
   data_hash.each_with_index do |node,index|
     if node["type"].to_s == "project"
-      if node["type"].to_s == "project"
+      if node["type"].to_s == "project" 
+        
         node["tags"].each do |tag|
           alltags.each_with_index do |alltag, tagindex|
             if alltag.guid.to_s == tag.to_s
@@ -93,6 +101,7 @@ helpers do
             end
           end
         end
+      
         #linksList.push({ source: index})
       end
 
@@ -120,7 +129,7 @@ get '/' do
 end
 
 get '/graph' do
-  graph
+  #graph
   slim :graph
 end
 
