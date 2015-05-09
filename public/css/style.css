@@ -1,17 +1,20 @@
 body {
   background: black
+
 }
+
+
 
 ul {
     list-style-type: none;
     font-family: 'Fira Sans', sans-serif;
+    color: #9B9D9E;
 }
 .line {
-    stroke: black;
-    stroke-width: 1px;
+  stroke-width: .4px;
 }
 .link {
-  stroke: #5E5E5E;
+  stroke: rgba(94,94,94,.7);
   stroke-width: 1;
 }
 .project {
