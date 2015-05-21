@@ -118,7 +118,7 @@ var linkedByIndex = {};
 
   zoom.on("zoom", function() {
   
-  var stroke = nominal_stroke;
+    var stroke = nominal_stroke;
     if (nominal_stroke*zoom.scale()>max_stroke) stroke = max_stroke/zoom.scale();
     link.style("stroke-width",stroke);
     

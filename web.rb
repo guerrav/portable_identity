@@ -133,6 +133,10 @@ get '/graph' do
   slim :graph
 end
 
+get '/graph2' do
+  #graph
+  slim :graph2
+end
 
 
 get '/:id' do
