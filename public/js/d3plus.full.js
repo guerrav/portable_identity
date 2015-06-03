@@ -30396,18 +30396,18 @@ module.exports = function(params) {
     mw += "px"
 
     var title = header.append("div")
-      .attr("class","title")
-      .style("max-width",mw)
+      .attr("class","title") // titulo
+      //.style("max-width",mw)
       
       .style("vertical-align","top")
-      .style("width",title_width+"px")
+      //.style("width",title_width+"px")
       .style("display","inline-block")
       .style("overflow","hidden")
       .style("text-overflow","ellipsis")
       .style("word-wrap","break-word")
       .style("z-index",1)
       .style("font-size",params.size === "large" ? "18px" : "16px")
-      .style("line-height",params.size === "large" ? "20px" : "17px")
+      .style("line-height",params.size === "large" ? "23px" : "17px")
       .style("padding",params.size === "large" ? "3px 6px" : "3px")
       .text(params.title)
   }
@@ -34571,7 +34571,7 @@ module.exports = function( vars , group ) {
             text.enter().append("text")
               .attr("font-size",fontSize)
               .attr("id","d3plus_label_"+d.d3plus.id)
-              .attr("class","d3plus_label")
+              .attr("class","label_nodo")
               .call(style)
               .call(opacity);
 

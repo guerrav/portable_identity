@@ -122,13 +122,13 @@ end
 ##
 # Index page
 ##
-get '/' do
-  @alltags = note_store.listTags
-  
-  slim :index
-end
+#get '/' do
+#  @alltags = note_store.listTags
+#  
+#  slim :index
+#end
 
-get '/graph' do
+get '/' do
   #graph
   slim :graph
 end

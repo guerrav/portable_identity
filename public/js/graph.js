@@ -5,11 +5,10 @@ var htmlButton = "<a id='fancybox fancybox.iframe' data-fancybox-type='iframe' h
 var viz = d3plus.viz()
   .container(d3.select("body"))
   .background("#000")
-  .font({ "family": [ 'aktiv-grotesk-std' ,"sans-serif" ], 
-          "weight": "400"})
+  .font({ "family": [ 'aktiv-grotesk-std' ,'sans-serif' ], 
+          "weight": 400})
   
-  .legend({ "font":{"color": "#ffffff"},
-            "icons": false })
+  
   .tooltip({ "font":{"color": "#ffffff"},
               "background": "#333333",
               "curtain":{"opacity":.9}})
@@ -29,7 +28,7 @@ d3.json("/js/projects.json", function(graph) {
 
   var a = "<a class='btn fancybox fancybox.iframe' 'data-fancybox-type'='iframe' href='";
   var b = "";
-  var c = "'>Leer texto</a>";
+  var c = "'>Leer entrada</a>";
   var titulo ="<p class='tituloprojecto'>Portable Identity</p>"
 
   
