@@ -1,10 +1,12 @@
-ul 
-  h2= @nota.title
-  // Contenido 
-  - html_doc = Nokogiri::XML(@nota.content)
-  - span_list = html_doc.css('en-note pre')
+body style="background:#fff;"
 
-  - span_list.each do |span|
-    li
-      p= span.text
+  ul 
+    h2= @nota.title
+    // Contenido 
+    - html_doc = Nokogiri::XML(@nota.content)
+    - span_list = html_doc.css('en-note div')
+
+    - span_list.each do |span|
+      li
+        p= span.text
 

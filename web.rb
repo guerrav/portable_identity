@@ -71,7 +71,7 @@ helpers do
 
   alltags = note_store.listTags
   tagsList = alltags.map do |tag|
-  { name: tag.name, type: "tag"}
+  { name: tag.name, type: "tag", url: "none"}
   end
 
 
@@ -133,10 +133,6 @@ get '/graph' do
   slim :graph
 end
 
-get '/graph2' do
-  #graph
-  slim :graph2
-end
 
 
 get '/:id' do
