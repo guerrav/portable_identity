@@ -1,23 +1,19 @@
 body {
   background: black;
+  font-family: "aktiv-grotesk-std",sans-serif;
 
 }
+
+/* estilo de Portable identity Master Head*/
 .tituloprojecto{
   position: fixed;
   font-size: 30px;
   left: 33px;
   text-decoration: underline;
   top: 0;
+  color: #fff;
 }
-.title{
-  position: absolute;
-  width: 280px;
-  top: -5px;
-  right: 250px;
-  background: #fff;
-  text-align: right;
-  color: #000;
-}
+
 .btn {
   display: inline-block;
   position: absolute;
@@ -25,91 +21,87 @@ body {
   border: none;
   text-decoration: none;
   color: #000;
-
   transition: all 0.2s;
   left: -106px;
-  top: 60px;
+  top: 0;
   padding: 6px 14px;
 
   background: #FFFFFF;
 }
 
+/* Tooltip */
 
-
-.tipo {
-  position: absolute;
-  display: block;
-  top: 3px;
-  font-size: 15px;
-  color: #FF0029;
-}
-
-.blanco{
-  color:#fff;
-}
 .seperator{
   opacity: .2;
 }
+/* texto blanco del UL en tooltip */
+.blanco{
+  color:#fff;
+}
 
-.label_nodo{
-  color: #fff;
+.d3plus_label {
+  fill: #fff !important;
+  /*font-size: 20px !important;*/
+}
+
+.d3plus_rect rect {
+
+  opacity: 1 !important;
+  /*
+  rx: 1.5229275226593px !important;
+  ry: 1.5229275226593px !important;
+  width: 1.5229275226593px !important;
+  height: 1.5229275226593px !important;
+  */
 }
 
 ul {
     list-style-type: none;
-    font-family: "aktiv-grotesk-std",sans-serif;
     color: #000;
     font-size: 13px;
     line-height: 23px;
     padding: 0 10px;
 }
-.line {
-  stroke-width: .4px;
-}
-.link {
-  stroke: rgba(94,94,94,.7);
-  stroke-width: 1;
-}
-.project {
-    fill: #ccc;
 
-}
-.circle {
-  fill: #FF0202;
+.d3plus_tooltip_data_title{
+  display: none !important; 
 }
 
-.project, line {
-  cursor:pointer;
+.d3plus_tooltip_focus_link{
+  color: #fff !important;
+  padding-left: 0 !important;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
-.project text {
-  fill: white;
-  
-  font-family: "aktiv-grotesk-std",sans-serif;';
-  font-size: 16px;
-
-  fill-opacity:0;
+.d3plus_tooltip_focus_link div {
+  display: none !important;
 }
 
-.project:hover text {
-  fill-opacity:1;
+.tipo {
+  position: absolute;
+  display: block;
+  top: 3px;
+  left: -115px;
+  font-size: 15px;
+  color: #FF0029;
 }
 
-.project text.shadow {
-  fill: white;
-  fill-opacity:0;
+.d3plus_tooltip_data_seperator{
+  opacity: .2 !important;
 }
 
-.project:hover text.shadow {
-  stroke: #00DE7A;
-  stroke-width: 10px;
-
+.d3plus_tooltip_title{
+  color: #fff !important;
+  padding: 7px 0px 7px 0px !important;
 }
 
-.tag text {
-  font-family: "aktiv-grotesk-std",sans-serif;
-  fill: #9B9D9E;
-
-  font-size: 10px;
-  cursor:grabbing;
+.d3plus_color rect{
+  display: none !important;
 }
+
+#clipping_default975 rect {
+  height: 100% !important;
+  width: 100% !important;
+}
+

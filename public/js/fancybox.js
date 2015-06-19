@@ -10,8 +10,7 @@ $(document).ready(function() {
         }
     },
     'topRatio' :0.13,
-    'leftRatio' : .01,
-    'minHeight' : 212,
+    'minHeight' : 400,
     'maxWidth' : 500,
     'padding': 0
   });

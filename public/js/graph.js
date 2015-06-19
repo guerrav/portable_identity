@@ -1,5 +1,3 @@
-var htmlButton = "<a id='fancybox fancybox.iframe' data-fancybox-type='iframe' href='http://www.google.com' target='_blank'>Click here to go to Google</a>"
-
 
 // instantiate our D3plus viz object
 var viz = d3plus.viz()
@@ -9,18 +7,22 @@ var viz = d3plus.viz()
           "weight": 400})
   
   
-  .tooltip({ "font":{"color": "#ffffff"},
+  .tooltip({ 
               "background": "#333333",
-              "curtain":{"opacity":.9}})
+              "size": false,
+              "anchor" : "top center",
+              "curtain":{"opacity":.8}})
   
   .edges({ "color": "#FF0521", // lineas rojas
             "opacity": .3 // color de los links
              })
-  
+ 
+
+
   .color({ 
         "focus" : "#ff0029", // rojo cuando le das click 
-        "primary": "#ffffff", // line en blanco con el hover
-        "scale": ["#ffffff"] // color de los nodos
+        "primary": "#ffffff" // line en blanco con el hover
+         // color de los nodos
         });
 
   
@@ -33,7 +35,7 @@ d3.json("/js/projects.json", function(graph) {
 
   
   var e = "<span class='tipo'>Entries with tag: ";
-  var f = "";
+  
   var g = "</span>";
 
 
@@ -41,10 +43,13 @@ d3.json("/js/projects.json", function(graph) {
     
     if (b !== "none") {
       return a+b+c+titulo;
-    } else if (b == "none") {
+    } else if (b == "none") {      
       return e+g+titulo;
     }
   };
+
+  var blanco = "#fff";
+  var negro = "#000";
 
 
   viz
@@ -53,8 +58,11 @@ d3.json("/js/projects.json", function(graph) {
     .edges(graph.links)
     .data(graph.nodes)
     .data({"large":2000})
+
     
-    .size(function(d){ b = d.url; f = d.type; return d.type == "tag" ? 4 : 25 })
+    .size(function(d){ b = d.url; return d.type === "tag" ? 4 : 27 })
+    .color(function(d){ return d.type === "tag" ? negro : blanco })
+ 
     .id("name") // key for which our data is unique on
 
     .tooltip({"html": url});
