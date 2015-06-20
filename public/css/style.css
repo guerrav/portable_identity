@@ -1,6 +1,6 @@
 body {
   background: black;
-  font-family: "aktiv-grotesk-std",sans-serif;
+  font-family: "aktiv-grotesk-std",sans-serif !important;
 
 }
 
@@ -10,7 +10,7 @@ body {
   font-size: 30px;
   left: 33px;
   text-decoration: underline;
-  top: 0;
+  top: 25px;
   color: #fff;
 }
 

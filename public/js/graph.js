@@ -31,12 +31,11 @@ d3.json("/js/projects.json", function(graph) {
   var a = "<a class='btn fancybox fancybox.iframe' 'data-fancybox-type'='iframe' href='";
   var b = "";
   var c = "'>Leer entrada</a>";
-  var titulo ="<p class='tituloprojecto'>Portable Identity</p>"
+  var titulo ="<a class='tituloprojecto' href='/'>Portable Identity</a>"
 
   
-  var e = "<span class='tipo'>Entries with tag: ";
+  var e = "<span class='tipo'>Entries with tag: </span>";
   
-  var g = "</span>";
 
 
   var url = function(d) {
@@ -44,12 +43,14 @@ d3.json("/js/projects.json", function(graph) {
     if (b !== "none") {
       return a+b+c+titulo;
     } else if (b == "none") {      
-      return e+g+titulo;
+      return e+titulo;
     }
   };
 
   var blanco = "#fff";
   var negro = "#000";
+
+
 
 
   viz
@@ -60,12 +61,15 @@ d3.json("/js/projects.json", function(graph) {
     .data({"large":2000})
 
     
-    .size(function(d){ b = d.url; return d.type === "tag" ? 4 : 27 })
-    .color(function(d){ return d.type === "tag" ? negro : blanco })
- 
-    .id("name") // key for which our data is unique on
 
+    .size(function(d){ b = d.url; return d.type === "tag" ? 4 : 27; })
+    .color(function(d){ return d.type === "tag" ? negro : blanco; })
+
+    
+  
+    .id("name") // key for which our data is unique on
     .tooltip({"html": url});
+    
     
   viz.draw(); 
 

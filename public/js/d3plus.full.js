@@ -30540,8 +30540,8 @@ module.exports = function(params) {
 
       if (d.link) {
         name
-          .style("cursor","pointer")
-          .on(events.click,d.link)
+          //.style("cursor","pointer")
+          //.on(events.click,d.link)
       }
 
       if ( d.value instanceof Array ) {
