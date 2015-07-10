@@ -1,8 +1,14 @@
 body {
   background: black;
   font-family: "aktiv-grotesk-std",sans-serif !important;
-
 }
+
+.font1 {font-family:Verdana, Geneva, sans-serif;}
+.font2 {font-family:Arial, serif;}
+.font3 {font-family:"Courier New", Arial, Helvetica, sans-serif;}
+.font4 {font-family:"Times New Roman", Times, serif;}
+.font5 {font-family:"Impact";}
+
 
 /* estilo de Portable identity Master Head*/
 .tituloprojecto{
@@ -16,17 +22,22 @@ body {
 
 .btn {
   display: inline-block;
-  position: absolute;
+  position: fixed;
   font-style: italic;
-  border: none;
+  border-radius: 6px;
+  border: 2px solid #13FF1F;
   text-decoration: none;
-  color: #000;
-  transition: all 0.2s;
-  left: -106px;
-  top: 0;
-  padding: 6px 14px;
+  color: #fff;
+  left: 45%;
+  top: 23px;
+  padding: 8px 16px;
+  background: rgba(0,0,0,.5);
 
-  background: #FFFFFF;
+}
+
+.btn:hover {
+  color: #000;
+  background: #13FF1F;
 }
 
 /* Tooltip */
@@ -44,22 +55,12 @@ body {
   /*font-size: 20px !important;*/
 }
 
-.d3plus_rect rect {
 
-  opacity: 1 !important;
-  /*
-  rx: 1.5229275226593px !important;
-  ry: 1.5229275226593px !important;
-  width: 1.5229275226593px !important;
-  height: 1.5229275226593px !important;
-  */
-}
 
 ul {
     list-style-type: none;
-    color: #000;
-    font-size: 13px;
-    line-height: 23px;
+
+    font-size: 14px;
     padding: 0 10px;
 }
 
@@ -72,6 +73,7 @@ ul {
   padding-left: 0 !important;
   padding-top: 3px;
   padding-bottom: 3px;
+  z-index: 1 !important;
 }
 
 .d3plus_tooltip_focus_link div {
@@ -81,19 +83,23 @@ ul {
 .tipo {
   position: absolute;
   display: block;
-  top: 3px;
-  left: -115px;
+  top: 0;
+  height: 100%;
+  width: 248px;
+  margin-left: -8px;
+  background-color: #FF0000;
+  border: 4px solid #fff;
   font-size: 15px;
-  color: #FF0029;
 }
 
 .d3plus_tooltip_data_seperator{
   opacity: .2 !important;
+  z-index: 1 !important;
 }
 
 .d3plus_tooltip_title{
   color: #fff !important;
-  padding: 7px 0px 7px 0px !important;
+  padding: 7px 5px !important;
 }
 
 .d3plus_color rect{
@@ -103,5 +109,42 @@ ul {
 #clipping_default975 rect {
   height: 100% !important;
   width: 100% !important;
+}
+
+
+.d3plus_rect rect {
+
+  opacity: 1 !important;
+  /*
+  rx: 1.5229275226593px !important;
+  ry: 1.5229275226593px !important;
+  width: 1.5229275226593px !important;
+  height: 1.5229275226593px !important;
+  */
+}
+
+.d3plus_rect text tspan {
+  fill: white;
+  font-size: 40px !important;
+  baseline-shift: 47% !important;
+  text-anchor: middle !important;
+  dominant-baseline: hanging !important;
+
+
+      
+}
+.project text.shadow {
+  fill: white;
+  fill-opacity:0;
+}
+.project:hover text.shadow {
+  stroke: #fff;
+  stroke-width: 5px;
+}
+
+.d3plus_tooltip_container {
+  background-color:  rgba(0,0,0,.7) !important;
+  border: 2px solid #13FF1F;
+  z-index: -1 !important;
 }
 

@@ -35488,7 +35488,7 @@ module.exports = function(vars) {
     .attr("transform","translate(0,"+vars.height.value+")");
 
   // Enter App Clipping Mask
-  var clipID = "clipping_" + vars.container.id;
+  var clipID = "clip clipping_" + vars.container.id;
   vars.g.clipping = vars.svg.selectAll("#clipping").data(["clipping"]);
   vars.g.clipping.enter().append("clipPath")
     .attr("id", clipID)

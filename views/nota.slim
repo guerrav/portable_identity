@@ -1,6 +1,8 @@
-body style="background:#fff;"
+//style="background:#fff;"
+body id="back" onload="return randomColor()"
 
-  ul 
+
+  ul.output
     h2= @nota.title
     // Contenido 
     - html_doc = Nokogiri::XML(@nota.content)

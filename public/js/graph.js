@@ -34,7 +34,7 @@ d3.json("/js/projects.json", function(graph) {
   var titulo ="<a class='tituloprojecto' href='/'>Portable Identity</a>"
 
   
-  var e = "<span class='tipo'>Entries with tag: </span>";
+  var e = "<span class='tipo'> </span>";
   
 
 
@@ -62,7 +62,7 @@ d3.json("/js/projects.json", function(graph) {
 
     
 
-    .size(function(d){ b = d.url; return d.type === "tag" ? 4 : 27; })
+    .size(function(d){ b = d.url; return d.type === "tag" ? 4 : 50; })
     .color(function(d){ return d.type === "tag" ? negro : blanco; })
 
     
