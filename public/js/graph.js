@@ -31,7 +31,7 @@ d3.json("/js/projects.json", function(graph) {
   var a = "<a class='btn fancybox fancybox.iframe' 'data-fancybox-type'='iframe' href='";
   var b = "";
   var c = "'>Leer entrada</a>";
-  var titulo ="<a class='tituloprojecto' href='/'>Portable Identity</a>"
+  var titulo ="<a class='tituloprojecto' href='/graph'>Portable Identity</a>"
 
   
   var e = "<span class='tipo'> </span>";
@@ -62,7 +62,7 @@ d3.json("/js/projects.json", function(graph) {
 
     
 
-    .size(function(d){ b = d.url; return d.type === "tag" ? 4 : 50; })
+    .size(function(d){ b = d.url; return d.type === "tag" ? 50 : 5; })
     .color(function(d){ return d.type === "tag" ? negro : blanco; })
 
     

@@ -16,8 +16,17 @@ helpers do
     
     #@developer_token = "S=s474:U=4fd8eee:E=1547c949d77:C=14d24e37138:P=1cd:A=en-devtoken:V=2:H=234b059eb4e02279683000744cfbbdc9"
 
+    
+
     # mayo 7 sacado por ernesto con la cuenta de identidad ya funciona
-    @developer_token = "S=s474:U=4fd8eee:E=154889b9d95:C=14d30ea6fe0:P=1cd:A=en-devtoken:V=2:H=a6456a71ce76fa260bfb2511b2553d56"
+    #@developer_token = "S=s474:U=4fd8eee:E=154889b9d95:C=14d30ea6fe0:P=1cd:A=en-devtoken:V=2:H=a6456a71ce76fa260bfb2511b2553d56"
+
+    # julio 7 nuevo dev token de la nueva cuenta de eevernote
+    #@developer_token = "S=s594:U=6aba74b:E=155efd3f435:C=14e9822c788:P=1cd:A=en-devtoken:V=2:H=64db8358dd00b0e1ce783f2d211055c4"
+
+
+    # julio 20 nuevo dev token de la nueva cuenta de evernote
+    @developer_token = "S=s594:U=6aba74b:E=156039eb295:C=14eabed8578:P=1cd:A=en-devtoken:V=2:H=6567751cd6566f053cc5f69aef842517"
   end
    
   def client
@@ -69,52 +78,56 @@ helpers do
 
   def graph
 
-  alltags = note_store.listTags
-  tagsList = alltags.map do |tag|
-  { name: tag.name, type: "tag", url: "none"}
-  end
+    alltags = note_store.listTags
+    tagsList = alltags.map do |tag|
+    { name: tag.name, type: "tag", url: "none"}
+    end
 
 
-  notesList = all_notes_guid.map do |note|
-  { name: note.title, type: "project", tags: note.tagGuids ? note.tagGuids : [], url: note.guid}
-  end
-  nodeList = tagsList.push(*notesList)
+    notesList = all_notes_guid.map do |note|
+    { name: note.title, type: "project", tags: note.tagGuids ? note.tagGuids : [], url: note.guid}
+    end
+    nodeList = tagsList.push(*notesList)
 
-  File.open("public/js/nodeList.json","w") do |f|
-    f.write(nodeList.to_json)
-  end
+    File.open("public/js/nodeList.json","w") do |f|
+      f.write(nodeList.to_json)
+    end
 
-  file = File.read("public/js/nodeList.json")
-  data_hash = JSON.parse(file)
+    file = File.read("public/js/nodeList.json")
+    data_hash = JSON.parse(file)
 
-  linksList = Array.new
-  
-  data_hash.each_with_index do |node,index|
-    if node["type"].to_s == "project"
-      if node["type"].to_s == "project" 
-        
-        node["tags"].each do |tag|
-          alltags.each_with_index do |alltag, tagindex|
-            if alltag.guid.to_s == tag.to_s
-                  
-              linksList.push({ source: index, target: tagindex})
+    linksList = Array.new
+    
+    data_hash.each_with_index do |node,index|
+      if node["type"].to_s == "project"
+        if node["type"].to_s == "project" 
+          
+          node["tags"].each do |tag|
+            alltags.each_with_index do |alltag, tagindex|
+              if alltag.guid.to_s == tag.to_s
+                    
+                linksList.push({ source: index, target: tagindex})
+              end
             end
           end
+        
+          #linksList.push({ source: index})
         end
-      
-        #linksList.push({ source: index})
+
       end
-
+      #@count = linksList
     end
-    #@count = linksList
+
+    projects = { links: linksList, nodes: nodeList}
+    
+    File.open("public/js/projects.json","w") do |f|
+      f.write(projects.to_json)
+    end
+ 
   end
 
-  projects = { links: linksList, nodes: nodeList}
-  
-  File.open("public/js/projects.json","w") do |f|
-    f.write(projects.to_json)
-  end
- 
+  def load_pictures
+    Dir.glob("public/img/*.{jpg,JPG}")
   end
   
 end
@@ -129,6 +142,12 @@ end
 #end
 
 get '/' do
+  
+  @pictures = load_pictures
+  slim :intro
+end
+
+get '/graph' do
   #graph
   slim :graph
 end

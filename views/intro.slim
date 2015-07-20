@@ -1,0 +1,31 @@
+body style="background:#fff;" onload="return randomSize()"
+  
+  #container
+
+    h1 Identidad Portátil
+
+    p ¿Qué es la identidad? ¿Está en el idioma materno, en el lugar donde naciste? ¿Cuál es la relación entre el lenguaje y la geografía? ¿Entre un texto y un hogar? 
+
+    p Empecé a escribir en libretas estos textos hace más de quince años. Empezaron en la pared de mi casa y luego se extendieron por varias ciudades. Aunque son textos independientes, se relacionan entre ellos por temas, personas, lugares y paises. 
+
+    p Eso es lo interesante de la memoria. Los recuerdos estan fuertemente relacionados por sus contenidos, pero no se organizan de forma cronológica ni cartográfica (aunque nos esforcemos por entender el mundo así). Es justamente esta colección de memorias y sus conexiones lo que permite construir una personalidad.
+
+    p La intención de este sitio es visualizar las conexiones entre las notas y cuadernos de una persona, así como los esfuerzos para conservarse a sí mismo a lo largo del tiempo y el espacio, sin el contacto con una noción convencional de hogar. Es la documentación de una Identidad Portátil.
+    
+    
+    #content 
+     
+      
+      - @pictures.each do |picture| 
+
+        .frameImage
+          a href="#" 
+            img.foto.off src="#{picture.sub!(/public\//, '')}" alt="" width="250"
+    
+
+script src="/js/intro.js"
+script src="/js/randomsize.js"   
+  
+
+  
+

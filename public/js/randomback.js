@@ -1,7 +1,7 @@
 function randomColor() {
 
   var color = '#'; 
-  var letters = ['ffffff','cccccc','ffff00','00ffff','00ff00','0000ff','C7B299'];
+  var letters = ['338a47','003abb','615041','cccccc','4d4d4d','414a4a','848d91'];
   color += letters[Math.floor(Math.random() * letters.length)];
   document.getElementById('back').style.background = color; 
 
@@ -9,7 +9,7 @@ function randomColor() {
     return array[Math.floor(Math.random() * array.length)];
   }
 
-  var colors = ['#000000','#ff0000','#999999','#009245','#93278f'];
+  var colors = ['#FFFF00','#FF4F56','#000000','#00FFB1'];
   
   
   var outputs = document.getElementsByClassName('output');
