@@ -31,21 +31,13 @@ color: #fff;
 left: 45%;
 top: 23px;
 padding: 10px 45px;
-background: rgba(0,0,0,.5);
+background: rgba(0,0,0,.7);
 }
 
 
 
 .btn:hover {
-
-color: #000;
-
-background: #fff;
-
-}
-
-.btn:hover {
-  color: #000;
+  color: #fff;
   background: #888787;
 }
 
@@ -140,7 +132,7 @@ ul {
 
 .d3plus_rect text tspan {
   fill: white;
-  font-size: 40px !important;
+  /*font-size: 40px !important;*/
   baseline-shift: 47% !important;
   text-anchor: middle !important;
   dominant-baseline: hanging !important;

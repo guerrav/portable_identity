@@ -62,7 +62,7 @@ d3.json("/js/projects.json", function(graph) {
 
     
 
-    .size(function(d){ b = d.url; return d.type === "tag" ? 50 : 5; })
+    .size(function(d){ b = d.url; return d.type === "tag" ? 70 : 1; })
     .color(function(d){ return d.type === "tag" ? negro : blanco; })
 
     
