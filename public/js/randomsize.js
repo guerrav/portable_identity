@@ -8,7 +8,7 @@ function randomSize() {
         var posx = (Math.random() * $(document).width());
         var posy = (Math.random() * $(document).height());
         output.style.marginLeft = posx + 'px';
-        output.style.marginTop = posy + 'px';
+        output.style.marginTop = posy - 70 + 'px';
         
         
         
