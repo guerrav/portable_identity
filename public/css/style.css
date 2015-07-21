@@ -17,6 +17,7 @@ div#textointro {
   margin: 0 auto;
   font-size: 20px;
   line-height: 31px;
+  background-color: rgba(255,255,255,.7);
 }
 
 /* estilo de Portable identity Master Head*/
@@ -193,9 +194,7 @@ ul {
 
 
 
-.frameImage,
-.frameInvitation,
-.frameHeadline {
+.frameImage {
   left: 0%;
   position: absolute;
   top: 0%;
@@ -208,11 +207,9 @@ ul {
   filter: alpha(opacity = 100) !important;
   opacity: 1 !important;
 }
-.frameInvitation img {
-  border: 1px solid black;
-}
+
 .size1 {
-  width: 20px;
+  width: 35px;
 }
 .size2 {
   width: 40px;

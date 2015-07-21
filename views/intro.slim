@@ -2,14 +2,14 @@ body style="background:#fff;" onload="return randomSize()"
   
   #container
 
-    h1.tituloprojecto.negro Identidad Portátil
+    
     #content 
       - @pictures.each do |picture| 
 
         .frameImage
-          a href="#" 
-            img.foto.off src="#{picture.sub!(/public\//, '')}" alt="" width="250"
-            
+          img.foto.off src="#{picture.sub!(/public\//, '')}" alt="" width="250"
+    
+    h1.tituloprojecto.negro Identidad Portátil      
     #textointro
 
       p ¿Qué es la identidad? ¿Está en el idioma materno, en el lugar donde naciste? ¿Cuál es la relación entre el lenguaje y la geografía? ¿Entre un texto y un hogar? 
@@ -23,9 +23,9 @@ body style="background:#fff;" onload="return randomSize()"
     
     
     
-    a.btnintro href="/graph" Entrar
+      a.btnintro href="/graph" Entrar
 
-script src="/js/intro.js"
+//script src="/js/intro.js"
 script src="/js/randomsize.js"   
   
 
