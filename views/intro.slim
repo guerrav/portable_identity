@@ -1,29 +1,31 @@
 body style="background:#fff;" onload="return randomSize()"
   
-  #container
+  .pure-g 
 
+    .pure-u-1
     
-    #content 
       - @pictures.each do |picture| 
 
         .frameImage
           img.foto.off src="#{picture.sub!(/public\//, '')}" alt="" width="250"
     
-    h1.tituloprojecto.negro Identidad Portátil      
-    #textointro
+    .pure-u-1
+      h1.tituloprojecto.negro Identidad Portátil 
+     
+    .pure-u-1.pure-u-md-1-2.pure-u-lg-1-3   
+    .pure-u-1.pure-u-md-1-2.pure-u-lg-1-3   
+      #textointro
 
-      p ¿Qué es la identidad? ¿Está en el idioma materno, en el lugar donde naciste? ¿Cuál es la relación entre el lenguaje y la geografía? ¿Entre un texto y un hogar? 
+        p ¿Qué es la identidad? ¿Está en el idioma materno, en el lugar donde naciste? ¿Cuál es la relación entre el lenguaje y la geografía? ¿Entre un texto y un hogar? 
 
-      p Empecé a escribir en libretas estos textos hace más de quince años. Empezaron en la pared de mi casa y luego se extendieron por varias ciudades. Aunque son textos independientes, se relacionan entre ellos por temas, personas, lugares y paises. 
+        p Empecé a escribir en libretas estos textos hace más de quince años. Empezaron en la pared de mi casa y luego se extendieron por varias ciudades. Aunque son textos independientes, se relacionan entre ellos por temas, personas, lugares y paises. 
 
-      p Eso es lo interesante de la memoria. Los recuerdos estan fuertemente relacionados por sus contenidos, pero no se organizan de forma cronológica ni cartográfica (aunque nos esforcemos por entender el mundo así). Es justamente esta colección de memorias y sus conexiones lo que permite construir una personalidad.
+        p Eso es lo interesante de la memoria. Los recuerdos estan fuertemente relacionados por sus contenidos, pero no se organizan de forma cronológica ni cartográfica (aunque nos esforcemos por entender el mundo así). Es justamente esta colección de memorias y sus conexiones lo que permite construir una personalidad.
 
-      p La intención de este sitio es visualizar las conexiones entre las notas y cuadernos de una persona, así como los esfuerzos para conservarse a sí mismo a lo largo del tiempo y el espacio, sin el contacto con una noción convencional de hogar. Es la documentación de una Identidad Portátil.
+        p La intención de este sitio es visualizar las conexiones entre las notas y cuadernos de una persona, así como los esfuerzos para conservarse a sí mismo a lo largo del tiempo y el espacio, sin el contacto con una noción convencional de hogar. Es la documentación de una Identidad Portátil.
     
-    
-    
-    
-      a.btnintro href="/graph" Entrar
+        a.btnintro href="/graph" Entrar
+    .pure-u-1.pure-u-md-1-2.pure-u-lg-1-3   
 
 //script src="/js/intro.js"
 script src="/js/randomsize.js"   
