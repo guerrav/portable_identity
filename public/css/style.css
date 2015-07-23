@@ -241,3 +241,11 @@ ul {
 .size4 {
   width: 190px;
 }
+
+
+.update {
+  font-size: 40px;
+  font-family: "Courier New";
+  color: #fff;
+  text-decoration: none;
+}

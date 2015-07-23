@@ -148,11 +148,14 @@ get '/' do
 end
 
 get '/graph' do
-  #graph
+  
   slim :graph
 end
 
-
+get '/update' do
+  graph
+  slim :update
+end
 
 get '/:id' do
   # buscar la nota con el id

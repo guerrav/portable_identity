@@ -29466,7 +29466,7 @@ module.exports = function(text, opts) {
       } else if (smalls.indexOf(txt.toLowerCase()) >= 0 && i !== 0 && i !== text.length - 1) {
         return new_txt = txt.toLowerCase();
       } else {
-        return new_txt = txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        return new_txt = txt.charAt(0) + txt.substr(1).toLowerCase();
       }
     } else {
       return "";
