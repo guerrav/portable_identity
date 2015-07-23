@@ -59,9 +59,6 @@ d3.json("/js/projects.json", function(graph) {
     .edges(graph.links)
     .data(graph.nodes)
     .data({"large":2000})
-
-    
-
     .size(function(d){ b = d.url; return d.type === "tag" ? 100 : 2; })
     .color(function(d){ return d.type === "tag" ? negro : blanco; })
 

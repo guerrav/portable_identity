@@ -1,5 +1,5 @@
 body {
-  background: black;
+  
   font-family: "aktiv-grotesk-std",sans-serif !important;
 }
 
@@ -200,7 +200,7 @@ ul {
 
 .d3plus_tooltip_container {
   
-  background-color: rgba(242, 242, 242, 0.5) !important;
+  background-color: rgba(242, 242, 242, 0.7) !important;
   /* border: 2px solid #13FF1F; */
   border-radius: 6px;
   z-index: -1 !important;

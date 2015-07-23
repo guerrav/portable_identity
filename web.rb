@@ -80,12 +80,12 @@ helpers do
 
     alltags = note_store.listTags
     tagsList = alltags.map do |tag|
-    { name: tag.name, type: "tag", url: "none", size:"30"}
+    { name: tag.name, type: "tag", url: "none"}
     end
 
 
     notesList = all_notes_guid.map do |note|
-    { name: note.title, type: "project", tags: note.tagGuids ? note.tagGuids : [], url: note.guid , size:"3"}
+    { name: note.title, type: "project", tags: note.tagGuids ? note.tagGuids : [], url: note.guid}
     end
     nodeList = tagsList.push(*notesList)
 
