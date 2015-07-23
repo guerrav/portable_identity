@@ -22619,12 +22619,12 @@ module.exports = {
   },
   lowercase: ["a", "an", "and", "as", "at", "but", "by", "for", "from", "if", "in", "into", "near", "nor", "of", "on", "onto", "or", "per", "that", "the", "to", "with", "via", "vs", "vs."],
   message: {
-    data: "analyzing data",
-    draw: "drawing visualization",
+    data: "analizando datos",
+    draw: "dibujando visualización",
     initializing: "initializing {0}",
-    loading: "loading data",
+    loading: "cargando datos",
     tooltipReset: "resetting tooltips",
-    ui: "updating ui"
+    ui: "actualizando interfaz"
   },
   method: {
     active: "active segments",

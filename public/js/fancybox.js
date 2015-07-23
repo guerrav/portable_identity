@@ -9,7 +9,7 @@ $(document).ready(function() {
             }
         }
     },
-    'topRatio' :0.13,
+    'topRatio' :0,
     'minHeight' : 400,
     'maxWidth' : 500,
     'padding': 0

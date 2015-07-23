@@ -2,7 +2,7 @@
 // instantiate our D3plus viz object
 var viz = d3plus.viz()
   .container(d3.select("body"))
-  .background("#000")
+  .background("#2a2728")
   .font({ "family": [ 'aktiv-grotesk-std' ,'sans-serif' ], 
           "weight": 400})
   
@@ -11,7 +11,7 @@ var viz = d3plus.viz()
               "background": "#333333",
               "size": false,
               "anchor" : "top center",
-              "curtain":{"opacity":.8}})
+              "curtain":{"opacity":.95}})
   
   .edges({ "color": "#FF0521", // lineas rojas
             "opacity": .3 // color de los links
@@ -62,7 +62,7 @@ d3.json("/js/projects.json", function(graph) {
 
     
 
-    .size(function(d){ b = d.url; return d.type === "tag" ? 70 : 1; })
+    .size(function(d){ b = d.url; return d.type === "tag" ? 100 : 2; })
     .color(function(d){ return d.type === "tag" ? negro : blanco; })
 
     

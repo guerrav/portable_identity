@@ -7,7 +7,7 @@ body {
 .font2 {font-family:Arial, serif;}
 .font3 {font-family:"Courier New", Arial, Helvetica, sans-serif;}
 .font4 {font-family:"Times New Roman", Times, serif;}
-.font5 {font-family:"Impact";}
+.font5 {font-family:"Impact";letter-spacing: 0.5px;}
 
 
 div#textointro {
@@ -15,6 +15,7 @@ div#textointro {
   width: 30%;
   left: 35%;
   margin: 0 auto;*/
+  font-family: "aktiv-grotesk-std",sans-serif !important;
   position: relative;
   font-size: 20px;
   line-height: 31px;
@@ -23,6 +24,7 @@ div#textointro {
 
 /* estilo de Portable identity Master Head*/
 .tituloprojecto{
+  font-family: "aktiv-grotesk-std",sans-serif !important;
   position: fixed;
   font-size: 36px;
   left: 33px;
@@ -51,15 +53,16 @@ div#textointro {
 }
 
 .btn {
-display: inline­block;
+display: inline-block;
 position: fixed;
 font-style: normal;
+font-size: 21px;
 border-radius: 6px;
 border: 2px solid #FFFFFF;
 text-decoration: none;
 color: #fff;
 left: 45%;
-top: 88px;
+top: 23px;
 padding: 10px 45px;
 background: rgba(0,0,0,.7);
 }
@@ -67,8 +70,8 @@ background: rgba(0,0,0,.7);
 
 
 .btn:hover {
-  color: #fff;
-  background: #888787;
+  color: #000;
+  background: #fff;
 }
 
 .btnintro {
@@ -78,6 +81,7 @@ background: rgba(0,0,0,.7);
   border: 2px solid #000000;
   text-decoration: none;
   color: #000;
+  left: 40%;
   top: 75px;
   padding: 10px 45px;
 }
@@ -97,7 +101,13 @@ background: rgba(0,0,0,.7);
   /*font-size: 20px !important;*/
 }
 
+.output {
+  line-height: 40px;
+}
 
+.output li p {
+  line-height: 26px;
+}
 
 ul {
   list-style-type: none;
@@ -174,12 +184,10 @@ ul {
 .d3plus_rect text tspan {
   fill: white;
   /*font-size: 40px !important;*/
-  baseline-shift: 47% !important;
+  baseline-shift: 84% !important;
   text-anchor: middle !important;
   dominant-baseline: hanging !important;
-
-
-      
+ 
 }
 .project text.shadow {
   fill: white;
@@ -191,8 +199,8 @@ ul {
 }
 
 .d3plus_tooltip_container {
-  background-color: #888787 !important;
-  /*background-color: rgba(242, 242, 242, 0.5) !important; */
+  
+  background-color: rgba(242, 242, 242, 0.5) !important;
   /* border: 2px solid #13FF1F; */
   border-radius: 6px;
   z-index: -1 !important;
@@ -203,6 +211,7 @@ ul {
   top: -3px !important;
   right: -3px !important;
 }
+
 
 
 
