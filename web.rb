@@ -127,7 +127,7 @@ helpers do
   end
 
   def load_pictures
-    Dir.glob("public/img/*.{jpg,JPG}")
+    Dir.glob("public/img/*.{jpg,JPG,gif}")
   end
   
 end
@@ -150,6 +150,15 @@ end
 get '/graph' do
   
   slim :graph
+end
+
+get '/instrucciones' do
+  @pictures = load_pictures
+  slim :instrucciones
+end
+get '/colofon' do
+  @pictures = load_pictures
+  slim :colofon
 end
 
 get '/update' do

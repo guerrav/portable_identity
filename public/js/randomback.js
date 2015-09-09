@@ -1,7 +1,8 @@
 function randomColor() {
 
   var color = '#'; 
-  var letters = ['338a47','003abb','615041','cccccc','4d4d4d','414a4a','848d91'];
+  // colores fondo
+  var letters = ['f2f2f2','e6e6e6','ccd2cc','b3b3ac'];
   color += letters[Math.floor(Math.random() * letters.length)];
   document.getElementById('back').style.background = color; 
 
@@ -9,7 +10,8 @@ function randomColor() {
     return array[Math.floor(Math.random() * array.length)];
   }
 
-  var colors = ['#FFFF00','#FF4F56','#000000','#00FFB1'];
+  //colores texto
+  var colors = ['#ff4f56','#534741','#003abb','#454659','#245261'];
   
   
   var outputs = document.getElementsByClassName('output');

@@ -7,7 +7,7 @@ body {
 .font2 {font-family:Arial, serif;}
 .font3 {font-family:"Courier New", Arial, Helvetica, sans-serif;}
 .font4 {font-family:"Times New Roman", Times, serif;}
-.font5 {font-family:"Impact";letter-spacing: 0.5px;}
+.font5 {font-family:"Georgia";letter-spacing: 0.5px;}
 
 
 div#textointro {
@@ -15,8 +15,11 @@ div#textointro {
   width: 30%;
   left: 35%;
   margin: 0 auto;*/
+
+
   font-family: "aktiv-grotesk-std",sans-serif !important;
   position: relative;
+  top: 80px;
   font-size: 20px;
   line-height: 31px;
   background-color: rgba(255,255,255,.7);
@@ -29,7 +32,7 @@ div#textointro {
   font-size: 36px;
   left: 33px;
   text-decoration: underline;
-  top: 25px;
+  top: 45px;
   color: #fff;
 }
 
@@ -84,6 +87,16 @@ background: rgba(0,0,0,.7);
   left: 40%;
   top: 75px;
   padding: 10px 45px;
+}
+
+.btnintromenu {
+    position: relative;
+    font-style: normal;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    top: 92px;
+    padding-left: 23px;
 }
 
 /* Tooltip */
@@ -230,16 +243,16 @@ ul {
 }
 
 .size1 {
-  width: 45px;
+  width: 10px;
 }
 .size2 {
-  width: 70px;
+  width: 20px;
 }
 .size3 {
-  width: 110px;
+  width: 30px;
 }
 .size4 {
-  width: 190px;
+  width: 45px;
 }
 
 
