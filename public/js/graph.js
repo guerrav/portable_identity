@@ -31,7 +31,7 @@ d3.json("/js/projects.json", function(graph) {
   var a = "<a class='btn fancybox fancybox.iframe' 'data-fancybox-type'='iframe' href='";
   var b = "";
   var c = "'>Leer entrada</a>";
-  var titulo ="<a class='tituloprojecto' href='/graph'>Identidad Portátil</a>"
+  var titulo ="<a class='tituloprojecto' href='/'>Identidad Portátil</a>"
 
   
   var e = "<span class='tipo'> </span>";
