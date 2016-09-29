@@ -26,7 +26,7 @@ helpers do
 
 
     # julio 20 nuevo dev token de la nueva cuenta de evernote
-    @developer_token = "S=s594:U=6aba74b:E=156039eb295:C=14eabed8578:P=1cd:A=en-devtoken:V=2:H=6567751cd6566f053cc5f69aef842517"
+    @developer_token = "S=s594:U=6aba74b:E=15ecb459922:C=15773946aa8:P=1cd:A=en-devtoken:V=2:H=dd80b23c1afd3a9da725f0fd065dc491"
   end
    
   def client
